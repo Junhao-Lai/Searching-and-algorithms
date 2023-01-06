@@ -1,4 +1,4 @@
-def merge(numbers, i, j, k):
+def merge(numbers, i, j, k): #i is 1st element, k is last element
     merged_size = k - i + 1   #  Size of merged partition
     merged_numbers = []        #  Temporary list for merged numbers
     for l in range(merged_size):
@@ -9,7 +9,7 @@ def merge(numbers, i, j, k):
     left_pos = i       #  Initialize left partition position
     right_pos = j + 1  #  Initialize right partition position
     
-    #  Add smallest element from left or right partition to merged numbers
+    #  Add smallest element from left or right partition to merged numbers j是除以2 K是最后element
     while left_pos <= j and right_pos <= k:
         if numbers[left_pos] < numbers[right_pos]:
             merged_numbers[merge_pos] = numbers[left_pos]
